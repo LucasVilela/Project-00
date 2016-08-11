@@ -9,31 +9,31 @@ var gameCounter = 1;
 var winner = "false";
 var playerOne = true;
 
+var samba;
+
 $(document).ready(function() {
 
     $('#newGame').click(function() {
     window.location.reload();
-
-    var starWarsTheme = $("#StarWarsTheme")[0].play();
-    var imperialMarch = $("#imperialMarch")[0].play();
-    var lightSaber = $("#lightSaber")[0].play();
-    var vaderBreath = $("#vaderBreath")[0].play();
-
-
 });
-
-///audio player
-// var starWarsTheme = $("#StarWarsTheme").play();
-// var imperialMarch = $("#imperialMarch").play();
-// var lightSaber = $("#lightSaber").play();
-// var vaderBreath = $("#vaderBreath").play();
-
-
-
     console.log("Ready");
     var moves = 0;
     var player1;
     var player2;
+
+    if (moves ===0) {
+        var theme = document.createElement("AUDIO");
+        theme.src = './sounds/theme.mp3';
+        theme.play();
+        theme.volume = 0.5;
+        if (pointsPlayer1 === 1) {
+            theme.pause();
+            var vader2 = document.createElement("AUDIO");
+            vader2.src = './sounds/imperial_march.mp3';
+            vader2.play();
+
+        }
+    }
     //REFERENCE TO COPARE THE STORED PLAYERS VARIABLE
     var winTest = [
         [1, 2, 3],
@@ -75,14 +75,24 @@ $(document).ready(function() {
 
         // CREATE THE VARIABLE THAT STORES THE NUMBER CLICKED
 
+
         var idAttr = $(this).attr('id');
         //CHANGE THE TEXT WHEN CLICKED
         if (player1 === true) {
             playerOne = true;
+            var lightsaber = document.createElement("AUDIO");
+            lightsaber.src = './sounds/light-saber-on.mp3';
+            lightsaber.play();
+
             $(this).text('X');
+
         } else {
             playerOne = false;
             $(this).text('O');
+            var lightsaber2 = document.createElement("AUDIO");
+            lightsaber2.src = './sounds/light-saber-on.mp3';
+            lightsaber2.play();
+
         }
         // TURN OFF THE CLICK BUTTON
         $(this).off("click");
@@ -139,10 +149,16 @@ $(document).ready(function() {
                 $(".gameTable").off("click");
                 gameCounter += 1;
                 if (winner === true && playerOne === true) {
+                    var luke = document.createElement("AUDIO");
+                    luke.src = './sounds/luke.mp3';
+                    luke.play();
                     pointsPlayer1 +=1;
                     endGame = true;
                     reset();
                 }else if (winner === true && playerOne ===false) {
+                    var vader = document.createElement("AUDIO");
+                    vader.src = './sounds/vader_breath.mp3';
+                    vader.play();
                     pointsPlayer2 +=1;
                     endGame = true;
                     reset();

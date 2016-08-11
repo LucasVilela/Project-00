@@ -12,12 +12,12 @@
        url('fonts/StarJediRounded.svg') format('svg'); /* Legacy iOS */
 }
 @keyframes animation {
-    from {color: white;}
+    from {color: red;}
     to {color: yellow;}
   }
 @keyframes animation2 {
-    from {color: green;}
-    to {color: blue;}
+    from {color: white;}
+    to {color: red;}
   }
 
 body {
@@ -26,9 +26,9 @@ body {
   box-sizing: border-box;
   color: yellow;
   font-family: 'Raleway', sans-serif;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: bold;
-  letter-spacing: 10px;
+  letter-spacing: 5px;
   animation-name: animation2;
   animation-duration: 5s;
   animation-iteration-count: infinite;
@@ -90,6 +90,7 @@ h2{
 }
 .gameTable{
   color: white;
+  font-size: 100px;
   /*border: 2px solid blue;*/
   /*margin: 2px solid blue;*/
   width: 170px;
