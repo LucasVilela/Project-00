@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'StarWars';
+  src: url('fonts/Jedi.eot'); /* IE9 Compat Modes */
+  src:
+       url('fonts/Jedi.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/StarJediRounded.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/StarJediRounded.ttf')  format('truetype'),
+       url('fonts/StarJediRounded.svg') format('svg'); /* Legacy iOS */
+}
+@keyframes animation {
+    from {color: white;}
+    to {color: yellow;}
+  }
+@keyframes animation2 {
+    from {color: green;}
+    to {color: blue;}
+  }
+
+body {
+  background-color: white;
+  text-align: center;
+  box-sizing: border-box;
+  color: yellow;
+  font-family: 'Raleway', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 10px;
+  animation-name: animation2;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  font-weight: 700;
+  background-image: url("images/deathStar_wallpaper.jpg");
+
+  }
+
+
+.collum{
+/*height: 800px;*/
+
+}
+h1{
+  margin: 1px;
+  font-family: 'StarWars';
+}
+h2{
+  margin: 0;
+}
+.profile{
+  border-radius: 50%;
+  margin: 20px
+}
+.profile#hover{
+  transform: rotateX(720);
+}
+#darth{
+  width: 30%;
+  height: 100%;
+  /*border: 4px solid orange;*/
+  display: inline-block;
+  float: left;
+  font-family: 'StarWars';
+}
+
+#game{
+  width: 40%;
+  height: 100%;
+  /*border: 4px solid red;*/
+  display: inline-block;
+  float: left;
+}
+
+#kylo{
+  width: 30%;
+  /*border: 4px solid gray;*/
+  display: inline-block;
+  float: left;
+  font-family: 'StarWars';
+}
+.table{
+  background-image: url("images/lightsaber6.png");
+      background-size: 103%;
+      background-position: 10% 40%;
+      font-size: 100px;
+      color: blue;
+
+}
+.gameTable{
+  color: white;
+  /*border: 2px solid blue;*/
+  /*margin: 2px solid blue;*/
+  width: 170px;
+  height: 170px;
+  left: 300px;
+  top: 50px;
+  animation-name: animation;
+  animation-duration: 1s;
+  animation-iteration-count:infinite;;
+}
+.gameTable:hover{
+  cursor: pointer;
+}
+
+.markers{
+  width: 200px;
+  height: 200px;
+  color: black;
+  font-size: 150px;
+  font-family: 'Patrick Hand', cursive;
+  padding: 40px;
+}
+
+.newGame {
+    background-color: black;
+    border: 1px solid red;
+    /*border: none;*/
+    color: red;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 15px;
+}
+.reset {
+    background-color: black;
+    border: 1px solid red;
+    /*border: none;*/
+    color: red;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 15px;
+}
+
+.scorePl1 {
+
+  color: red;
+  font-size: 230px;
+}
+.scorePl2 {
+  color: red;
+  font-size: 230px;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Patrick+Hand' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css">
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,900' rel='stylesheet' type='text/css'>
+
+  <script src="jquery-3.1.0.min.js"></script>
+  <script src="main.js"></script>
+
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+</head>
+<body>
+
+<div class="collum" id="darth">
+  <img src="images/darth_profile.jpg" class="profile" style="width:200px;height:150px;">
+
+  <img src="images/darthname.gif" alt="Darth Vader" />
+  <h1><span class="scorePl1">0</span></h1>
+</div>
+
+<!-- ========AUDIO======= -->
+
+<audio>
+<source class="audio"id="imperialMarch"src="sounds/imperial_march.mp3"></source>
+<source class="audio"id="lightSaber"src="sounds/light-saber-on.mp3"></source>
+<source class="audio"id="vaderBreath"src="sounds/vader_breath.mp3"></source>
+<source class="audio"id="StarWarsTheme"src="sounds/star-wars-theme-song.mp3"></source>
+</audio>
+
+
+
+  <!-- CREATE THE TABLE ROW WITH 9 SQUARES 3 PER ROLL  -->
+  <!-- SPECIFY ID FOR EACH ROW -->
+<div class="collum" id="game">
+  <table class="table">
+    <h1>Round <span class="round"> </span></h1>
+    <!-- <h2>Draw :<span class="draw">X</span></h2> -->
+    <tbody>
+      <tr class="rowA">
+        <td class="gameTable" id="1">
+        <td class="gameTable" id="2">
+        <td class="gameTable" id="3">
+      </tr>
+      <tr class="rowB">
+        <td class="gameTable" id="4">
+        <td class="gameTable" id="5">
+        <td class="gameTable" id="6">
+      </tr>
+      <tr class="rowC">
+        <td class="gameTable" id="7">
+        <td class="gameTable" id="8">
+        <td class="gameTable" id="9">
+      </tr>
+    </tbody>
+  </table>
+  <!-- <button class="reset" name="RESET" id="reset">RESET</button> -->
+  <button class="newGame" name="newGame" id="newGame">New Game</button>
+</div>
+
+<div class="collum" id="kylo">
+    <img src="images/kylo_profile.jpg" alt="player1" class="profile" style="width:200px;height:150px;">
+
+    <img src="images/kyloname.gif" alt="Kylo Ren" />
+    <h1><span class="scorePl2">0</span></h1>
+
+</div>
+</body>
+</html>
